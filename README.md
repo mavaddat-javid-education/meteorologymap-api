@@ -16,17 +16,23 @@ We deploy the application using the AWS Serverless Application Model \(AWS SAM\)
 
 ### Step 1
 
+Building
+
 ```bash
 sam build
 ```
 
 ### Step 2
 
+Packaging
+
 ```bash
 sam package --s3-bucket [s3-bucket-name] --output-template-file output.yaml
 ```
 
-### Initial deployment
+### Step 3
+
+Initial deployment
 
 ```bash
 sam deploy --template-file output.yaml --stack-name [stack-name] --capabilities CAPABILITY_IAM
